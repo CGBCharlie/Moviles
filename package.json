@@ -7,7 +7,9 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "ionic:build": "vue-cli-service build",
+    "ionic:serve": "vue-cli-service serve"
   },
   "dependencies": {
     "@capacitor/android": "3.5.0",
@@ -20,7 +22,8 @@
     "@ionic/vue-router": "^6.0.0",
     "core-js": "^3.6.5",
     "express": "^4.18.1",
-    "firebase": "^9.8.1",
+    "firebase": "^9.8.2",
+    "ionic": "^5.4.16",
     "vue": "^3.2.21",
     "vue-router": "^4.0.12"
   },

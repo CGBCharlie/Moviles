@@ -33,15 +33,16 @@
   --ion-safe-area-bottom: 22px;
 }
 
-ion-col > div {
+ion-col>div {
   background-color: #f7f7f7;
   border: solid 1px #ddd;
   padding: 10px;
+  color: gray;
 }
 </style>
 
 <script>
-import { defineComponent } from "vue";
+//import { defineComponent } from "vue";
 import {
   IonPage,
   IonHeader,
@@ -54,7 +55,7 @@ import {
 } from "@ionic/vue";
 import { getDatabase, ref, onValue } from "firebase/database";
 
-export default defineComponent({
+export default {
   name: "Tab1Page",
   components: {
     IonHeader,
@@ -72,21 +73,21 @@ export default defineComponent({
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();
       console.log(data);
-      var cont = 0;
-      snapshot.forEach((element) => {
-        this.listaKeys[cont] = element.key;
-        this.listaClaves[cont] = element.toJSON();
-        cont++;
+      var cont = 0
+      snapshot.forEach(element => {
+        this.listaKeys[cont] = element.key
+        this.listaClaves[cont] = element.toJSON()
+        cont++
       });
     });
-    console.log("lista de claves", this.listaClaves);
+    console.log("lista de claves", this.listaCaves)
   },
-
   data() {
     return {
       listaClaves: [{ status: "", usuario: "" }],
-      listaKeys: [],
-    };
-  },
-});
+      listaKeys: []
+    }
+  }
+};
+
 </script>
